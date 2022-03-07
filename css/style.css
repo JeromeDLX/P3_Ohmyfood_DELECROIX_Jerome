@@ -371,7 +371,7 @@ header h1 {
   background-color: #ffffff;
   margin: 20px 5px;
   overflow: hidden;
-  animation: apparition-progressive 800ms;
+  animation: apparition-progressive 700ms;
   animation-fill-mode: both;
 }
 .description-étape:nth-child(1) {
