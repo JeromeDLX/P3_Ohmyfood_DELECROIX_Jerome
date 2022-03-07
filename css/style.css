@@ -1,0 +1,466 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/* Version mobile : 650px et en dessous */
+/* Version tablette : Entre 650px et 1000px */
+/* Version tablette : Au dessus de 1000px */
+::before ::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+main {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Etape 2 - Barre de navigation */
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0px 2px 2px #c2c2c2;
+  padding: 5px;
+  margin: 0px;
+  position: relative;
+}
+
+/* Couleurs du projet */
+/* Etape 3 - Localisation page d'accueil */
+.city-acceuil {
+  display: flex;
+  background-color: #e6e6e6;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+.city-acceuil i {
+  margin-right: 15px;
+}
+
+/* Couleurs du projet */
+/* Etape 4 - Réservation et exploration */
+.exploration {
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+.exploration h2 {
+  margin-top: 0px;
+  padding-top: 32px;
+  margin-bottom: 18px;
+  font-size: 35px;
+}
+.exploration p {
+  font-size: 18px;
+  font-weight: 300;
+}
+.exploration button {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 15px 25px;
+  border: none;
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  border-radius: 25px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  box-shadow: 2px 1px 8px -3px #8b8b8b;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.exploration button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* Couleurs du projet */
+/* Etape 5 - Fonctionnement du site */
+.etape-site {
+  margin-left: 40px;
+  margin-right: 30px;
+  counter-reset: etapes;
+}
+.etape-site li {
+  position: relative;
+  list-style-type: none;
+  background-color: #f2f2f2;
+  padding: 20px 25px;
+  flex-grow: 1;
+  border-radius: 20px;
+  box-shadow: 2px 1px 8px -3px #8b8b8b;
+  cursor: pointer;
+  transition: 200ms;
+}
+.etape-site li::before {
+  content: counter(etapes);
+  counter-increment: etapes;
+  color: #ffffff;
+  background-color: #9356dc;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 17px;
+  left: -10px;
+}
+.etape-site ol {
+  display: flex;
+  gap: 25px;
+  margin: 25px 0px 70px 0px;
+  padding-left: 0%;
+}
+@media (max-width: 1000px) {
+  .etape-site ol {
+    flex-direction: column;
+  }
+}
+.etape-site i.fa-solid {
+  color: #8b8b8b;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.etape-site li:hover {
+  transform: scale(1.01);
+  box-shadow: 2px 1px 8px -3px #9356dc;
+  background-color: #f2e8ff;
+}
+
+/* Couleurs du projet */
+/* Etape 6 - Section des restaurants proposés */
+.restaurants {
+  background-color: #f2f2f2;
+  padding: 0px 35px;
+  padding-bottom: 80px;
+}
+.restaurants h2 {
+  padding-top: 40px;
+}
+
+.restaurants-dispo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+@media (max-width: 1000px) {
+  .restaurants-dispo {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.restaurants-dispo .nouveau {
+  position: relative;
+}
+.restaurants-dispo .nouveau::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 35px;
+  width: 90px;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  top: 15px;
+  right: 15px;
+  border-radius: 5px;
+}
+
+.cartes {
+  border-radius: 25px;
+  box-shadow: 2px 1px 8px -3px #8b8b8b;
+  transition: 200ms;
+  background-color: #ffffff;
+}
+.cartes-image {
+  border-radius: 25px 25px 0px 0px;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+}
+.cartes .img1 {
+  background-image: url("../images/restaurants/Normal/Pizzeria_Normal.jpg");
+}
+.cartes .img2 {
+  background-image: url("../images/restaurants/Normal/Burger_Normal.jpg");
+}
+.cartes .img3 {
+  background-image: url("../images/restaurants/Normal/Asiatique_Normal.jpg");
+}
+.cartes .img4 {
+  background-image: url("../images/restaurants/Normal/Gastronomique_Normal.jpg");
+}
+
+.cartes:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 3px 5px -3px #9356dc;
+}
+
+/* Etape 6.B - Description cartes */
+.cartes-description {
+  position: relative;
+}
+.cartes-description h3 {
+  padding-left: 20px;
+  margin-bottom: 7px;
+}
+.cartes-description p {
+  margin-top: 7px;
+  padding-left: 20px;
+}
+.cartes-description i {
+  font-size: 32px;
+  position: absolute;
+  right: 35px;
+  top: 20%;
+}
+.cartes-description .fa-solid {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  opacity: 0;
+  transition: all 0.3s linear 0s;
+}
+
+.fa-solid:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/* Couleurs du projet */
+/* Etape 7 - Footer */
+footer {
+  background-color: #353535;
+  color: #ffffff;
+  padding: 20px 30px;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  margin-top: 15px;
+}
+footer p {
+  margin: 20px 0px;
+}
+footer .couverts {
+  padding-right: 10px;
+}
+footer .mains {
+  padding-right: 5px;
+}
+
+/* Couleurs du projet */
+@keyframes apparition-progressive {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes spin90 {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+/* Etape 1 - Barre de retour menu principal */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: x-large;
+  margin-left: 20px;
+  transition: 300ms;
+}
+header i:hover {
+  color: #99E2D0;
+  transform: none;
+}
+header h1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Etape 2 - Mise en page image de fond de menu */
+.image-de-fond img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Etape 3 - Création titre menu et coeur */
+.titre-coeur {
+  background-color: #f2f2f2;
+  position: relative;
+  align-items: center;
+  margin-top: -30px;
+  padding: 10px 15px;
+  border-radius: 35px 35px 0px 0px;
+}
+.titre-coeur h2 {
+  font-family: "Shrikhand", cursive;
+}
+.titre-coeur i {
+  font-size: 32px;
+  position: absolute;
+  right: 35px;
+  top: 32%;
+}
+.titre-coeur .fa-solid {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  opacity: 0;
+  transition: all 0.3s linear 0s;
+}
+
+.fa-solid:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+/* Etape 4 - Création section contenu du menu */
+.menu-proposé {
+  padding: 10px 15px;
+  background-color: #f2f2f2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1000px) {
+  .menu-proposé {
+    grid-template-columns: 1fr;
+  }
+}
+.menu-proposé h3 {
+  margin-top: 0px;
+  font-weight: 200;
+  text-decoration: #99E2D0 underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}
+
+.etape-menu {
+  overflow: hidden;
+}
+
+.description-étape {
+  display: flex;
+  box-shadow: 2px 1px 8px -3px #8b8b8b;
+  border-radius: 20px;
+  background-color: #ffffff;
+  margin: 20px 5px;
+  overflow: hidden;
+  animation: apparition-progressive 800ms;
+  animation-fill-mode: both;
+}
+.description-étape:nth-child(1) {
+  animation-delay: 100ms;
+}
+.description-étape:nth-child(2) {
+  animation-delay: 200ms;
+}
+.description-étape:nth-child(3) {
+  animation-delay: 300ms;
+}
+.description-étape:nth-child(4) {
+  animation-delay: 400ms;
+}
+.description-étape:hover {
+  cursor: pointer;
+}
+.description-étape .description-titre-p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.description-étape .description-titre-p h4, .description-étape .description-titre-p p {
+  padding: 3px 0px;
+}
+.description-étape .description-titre-p h4 {
+  margin: 10px 0px 6px 15px;
+}
+.description-étape .description-titre-p p {
+  margin: 6px 0px 10px 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.description-étape .prix {
+  align-self: flex-end;
+  margin-left: auto;
+  font-weight: bold;
+  margin-right: 15px;
+}
+.description-étape .animation-sélection {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #99E2D0;
+  width: 60px;
+  margin-right: -60px;
+  transition: margin-right 0.6s;
+}
+.description-étape .animation-sélection .fa-check {
+  display: grid;
+  place-items: center;
+  color: #99E2D0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: 30px;
+}
+.description-étape:hover .animation-sélection {
+  margin-right: 0;
+}
+.description-étape:hover .fa-check {
+  animation: spin90 0.6s;
+}
+
+/* Etape 5 - Bouton commande */
+.bouton-commande {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+.bouton-commande button {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 15px 25px;
+  border: none;
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  box-shadow: 2px 1px 8px -3px #8b8b8b;
+  cursor: pointer;
+  transition: 200ms;
+}
+.bouton-commande button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,38 @@
+@use "../Utilitaires/couleurs.scss";
+
+/* Etape 4 - Réservation et exploration */ 
+
+.exploration{
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: couleurs.$lightgray-clair;
+        & h2{
+            margin-top: 0px;
+            padding-top: 32px;
+            margin-bottom: 18px;
+            font-size: 35px;
+        }
+            & p{
+                font-size: 18px;
+                font-weight: 300; 
+            }
+                & button{
+                    color: couleurs.$blanc;
+                    font-weight: 300;
+                    font-size: 18px;
+                    padding: 15px 25px;
+                    border: none;
+                    background-image: linear-gradient(to bottom right, couleurs.$secondaire, couleurs.$primaire);
+                    border-radius: 25px;
+                    margin-top: 15px;
+                    margin-bottom: 50px;
+                    box-shadow: 2px 1px 8px -3px couleurs.$gray;
+                    cursor: pointer;
+                    transition: 200ms;
+                }
+}
+
+.exploration button:hover{
+    transform: scale(1.02);
+    opacity: 0.9;
+}

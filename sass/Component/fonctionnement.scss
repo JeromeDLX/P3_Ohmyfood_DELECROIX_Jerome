@@ -1,0 +1,54 @@
+@use "../Utilitaires/couleurs.scss";
+
+/* Etape 5 - Fonctionnement du site */
+
+.etape-site{
+    margin-left: 40px;
+    margin-right: 30px;
+    counter-reset: etapes;
+    & li{
+        position: relative;
+        &::before{
+            content: counter(etapes);
+            counter-increment: etapes;
+            color: couleurs.$blanc;
+            background-color: couleurs.$primaire;
+            width: 25px;
+            height: 25px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 17px;
+            left: -10px;
+        }
+        list-style-type: none;
+        background-color: couleurs.$lightgray-clair;
+        padding: 20px 25px;
+        flex-grow: 1;
+        border-radius: 20px;
+        box-shadow: 2px 1px 8px -3px couleurs.$gray;
+        cursor: pointer;
+        transition: 200ms;
+        }
+        & ol{
+            display: flex;
+            gap: 25px;
+            margin: 25px 0px 70px 0px;
+            padding-left: 0%;
+                @media (max-width: 1000px) {
+                    flex-direction: column;
+                }
+        }
+            & i.fa-solid{
+                color: couleurs.$gray ;
+                margin-right: 15px;
+                margin-left: 15px;
+            }
+}
+
+.etape-site li:hover{
+    transform: scale(1.01);
+    box-shadow: 2px 1px 8px -3px couleurs.$primaire;
+    background-color: couleurs.$primaire-light;
+}

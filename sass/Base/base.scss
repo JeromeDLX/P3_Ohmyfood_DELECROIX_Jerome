@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Version mobile : 650px et en dessous */
+/* Version tablette : Entre 650px et 1000px */
+/* Version tablette : Au dessus de 1000px */
+
+::before
+::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+}
+
+main{
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}

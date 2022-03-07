@@ -1,0 +1,24 @@
+@use "../Utilitaires/couleurs.scss";
+
+/* Etape 7 - Footer */
+
+footer{
+    background-color: couleurs.$footer;
+    color: couleurs.$blanc;
+    padding: 20px 30px;
+        h2{
+            font-family: "Shrikhand", cursive;
+            margin-top: 15px;
+        }
+            p{
+                margin: 20px 0px;
+            }
+                .couverts{
+                    padding-right: 10px;
+                }
+
+                .mains{
+                    padding-right: 5px;
+                }
+}
+

@@ -1,0 +1,112 @@
+@use "../Utilitaires/couleurs.scss";
+
+/* Etape 6 - Section des restaurants proposés */
+
+.restaurants{
+    background-color: couleurs.$lightgray-clair;
+    padding: 0px 35px;
+    padding-bottom: 80px;
+        h2{
+            padding-top: 40px;
+        }
+}
+
+.restaurants-dispo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    @media (max-width:1000px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+        .nouveau{
+            position: relative;
+        }
+        .nouveau::before{
+            content: "Nouveau";
+            position: absolute;
+            height: 35px;
+            width: 90px;
+            background-color: couleurs.$tertiaire;
+            color: darken(couleurs.$tertiaire, $amount: 50%);
+            display: grid;
+            place-items: center;
+            top: 15px;
+            right: 15px;
+            border-radius: 5px;
+        }
+
+}
+
+.cartes{
+    border-radius: 25px;
+    box-shadow: 2px 1px 8px -3px couleurs.$gray;
+    transition: 200ms;
+    background-color: couleurs.$blanc;
+        &-image{
+            border-radius: 25px 25px 0px 0px;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+        }
+
+            .img1{
+                background-image: url("../images/restaurants/Normal/Pizzeria_Normal.jpg");
+            }
+
+            .img2{
+                background-image: url("../images/restaurants/Normal/Burger_Normal.jpg");
+            }
+
+            .img3{
+                background-image: url("../images/restaurants/Normal/Asiatique_Normal.jpg");
+            }
+
+            .img4{
+                background-image: url("../images/restaurants/Normal/Gastronomique_Normal.jpg");
+            }
+}
+
+.cartes:hover{
+    transform: scale(1.01);
+    box-shadow: 3px 3px 5px -3px couleurs.$primaire;
+}
+
+/* Etape 6.B - Description cartes */
+
+.cartes-description{
+    position: relative;
+    h3 {
+        padding-left: 20px;
+        margin-bottom: 7px;
+    }
+    p {
+        margin-top: 7px;
+        padding-left: 20px;
+    }
+        i{
+        font-size: 32px;
+        position: absolute;
+        right: 35px;
+        top: 20%;
+        }
+            .fa-solid{
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient(to bottom right, couleurs.$secondaire, couleurs.$primaire);
+            opacity: 0;
+            transition: all 0.3s linear 0s;        
+        }
+}
+
+.fa-solid:hover{
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+
+
+
+
+
+

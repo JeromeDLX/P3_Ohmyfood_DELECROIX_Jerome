@@ -1,0 +1,14 @@
+@use "../Utilitaires/couleurs.scss";
+
+/* Etape 3 - Localisation page d'accueil */
+
+.city-acceuil {
+    display: flex;
+    background-color: couleurs.$lightgray-medium;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+        & i {
+            margin-right: 15px;
+        }
+}
