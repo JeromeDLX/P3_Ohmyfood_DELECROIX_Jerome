@@ -191,6 +191,7 @@ cursor: pointer;
         transition: 200ms;
     }
         button:hover{
+            box-shadow: 2px 4px 12px -3px couleurs.$secondaire;
             transform: scale(1.02);
             opacity: 0.9;
         }
