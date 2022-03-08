@@ -65,7 +65,8 @@ header{
             .fa-solid{
             color: transparent;
             background-clip: text;
-            background-image: linear-gradient(to bottom right, couleurs.$secondaire, couleurs.$primaire);
+            -webkit-background-clip: text;
+            background-image: linear-gradient(to bottom right, couleurs.$secondaire, couleurs.$primaire);;
             opacity: 0;
             transition: all 0.3s linear 0s;        
         }
@@ -80,7 +81,7 @@ cursor: pointer;
 /* Etape 4 - Création section contenu du menu */
 
 .menu-proposé{
-    @media (max-width: 1000px) {
+    @media (max-width: 1350px) {
         grid-template-columns: 1fr;
     }
     padding: 10px 15px;
@@ -156,7 +157,7 @@ cursor: pointer;
                         color: couleurs.$tertiaire;
                         background-color: couleurs.$blanc;
                         border-radius: 50%;
-                        aspect-ratio: 1;
+                        aspect-ratio: 1/1;
                         width: 30px;
                     }
                 }
