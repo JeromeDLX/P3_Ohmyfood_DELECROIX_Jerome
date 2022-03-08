@@ -44,7 +44,6 @@ header {
   margin-right: 15px;
 }
 
-/* Couleurs du projet */
 /* Etape 4 - Réservation et exploration */
 .exploration {
   margin-bottom: 50px;
@@ -77,11 +76,11 @@ header {
 }
 
 .exploration button:hover {
+  box-shadow: 2px 4px 12px -3px #ff79da;
   transform: scale(1.02);
   opacity: 0.9;
 }
 
-/* Couleurs du projet */
 /* Etape 5 - Fonctionnement du site */
 .etape-site {
   margin-left: 40px;
@@ -136,7 +135,6 @@ header {
   background-color: #f2e8ff;
 }
 
-/* Couleurs du projet */
 /* Etape 6 - Section des restaurants proposés */
 .restaurants {
   background-color: #f2f2f2;
@@ -235,7 +233,6 @@ header {
   transform: scale(1.03);
 }
 
-/* Couleurs du projet */
 /* Etape 7 - Footer */
 footer {
   background-color: #353535;
@@ -256,7 +253,6 @@ footer .mains {
   padding-right: 5px;
 }
 
-/* Couleurs du projet */
 @keyframes apparition-progressive {
   0% {
     transform: translateY(50%);
@@ -428,7 +424,7 @@ header h1 {
   color: #99E2D0;
   background-color: #ffffff;
   border-radius: 50%;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   width: 30px;
 }
 .description-étape:hover .animation-sélection {
@@ -459,8 +455,42 @@ header h1 {
   transition: 200ms;
 }
 .bouton-commande button:hover {
+  box-shadow: 2px 4px 12px -3px #ff79da;
   transform: scale(1.02);
   opacity: 0.9;
+}
+
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  height: 100vh;
+  inset: 0px;
+  z-index: 1;
+  opacity: 0.95;
+  animation: disparition 200ms 2s forwards;
+}
+.loader i {
+  animation: rotation 2s linear;
+  color: #ff79da;
+}
+
+@keyframes disparition {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

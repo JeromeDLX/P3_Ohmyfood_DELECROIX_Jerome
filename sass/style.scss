@@ -1,8 +1,9 @@
-@import "./Base/base.scss";
-@import "./Layout/header.scss";
-@import "./Layout/cityacceuil.scss";
-@import "./Layout/exploration.scss";
-@import "./Component/fonctionnement.scss";
-@import "./Layout/restaurants.scss";
-@import "./Layout/footer.scss";
-@import "./Pages/menu_restaurants.scss";
+@use "./Base/base.scss";
+@use "./Layout/header.scss";
+@use "./Layout/cityacceuil.scss";
+@use "./Layout/exploration.scss";
+@use "./Component/fonctionnement.scss";
+@use "./Layout/restaurants.scss";
+@use "./Layout/footer.scss";
+@use "./Pages/menu_restaurants.scss";
+@use "./Utilitaires/loader.scss";
