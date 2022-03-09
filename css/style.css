@@ -353,9 +353,33 @@ header h1 {
 .menu-proposé h3 {
   margin-top: 0px;
   font-weight: 200;
-  text-decoration: #99E2D0 underline;
-  text-underline-offset: 8px;
-  text-decoration-thickness: 2px;
+}
+.menu-proposé .underline, .menu-proposé .underline-2, .menu-proposé .underline-3 {
+  position: relative;
+}
+.menu-proposé .underline:after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 45px;
+  border-bottom: 2px solid #99E2D0;
+}
+.menu-proposé .underline-2:after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 35px;
+  border-bottom: 2px solid #99E2D0;
+}
+.menu-proposé .underline-3:after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 50px;
+  border-bottom: 2px solid #99E2D0;
 }
 
 .etape-menu {
